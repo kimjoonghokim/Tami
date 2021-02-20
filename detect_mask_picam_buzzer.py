@@ -9,12 +9,20 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 from imutils.video import VideoStream
+from imutils.video.pivideostream import PiVideoStream
 import numpy as np
 import argparse
 import imutils
 import time
 import cv2
 import os
+import pygame
+
+os.putenv('SDL_FBDEV', '/dev/fb1')
+pygame.init()
+screen = pygame.display.set_mode((1080,1920))
+screen.fill((255,255,255))
+pygame.display.update()
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
 	# grab the dimensions of the frame and then construct a blob
@@ -103,7 +111,8 @@ maskNet = load_model(args["model"])
 # initialize the video stream and allow the camera sensor to warm up
 print("[INFO] starting video stream...")
 #vs = VideoStream(src=0).start()
-vs = VideoStream(usePiCamera=True).start()
+#vs = VideoStream(usePiCamera=True).start()
+vs = PiVideoStream().start()
 time.sleep(2.0)
 
 # loop over the frames from the video stream
@@ -112,7 +121,8 @@ while True:
 	# to have a maximum width of 400 pixels
 	frame = vs.read()
 	frame = imutils.resize(frame, width=500)
-
+	
+	start = time.time()
 	# detect faces in the frame and determine if they are wearing a
 	# face mask or not
 	(locs, preds) = detect_and_predict_mask(frame, faceNet, maskNet)
@@ -127,7 +137,7 @@ while True:
 		# determine the class label and color we'll use to draw
 		# the bounding box and text
 		if mask > withoutMask:
-			label = "Thank You. Mask On."
+			label = "Face Mask Detected"
 			color = (0, 255, 0)
 			buzzer.off()
 			red.off()
@@ -146,9 +156,14 @@ while True:
 		cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
 	# show the output frame
+	cv2.namedWindow("Face Mask Detector")
+	cv2.moveWindow("Face Mask Detector", 290,250)
 	cv2.imshow("Face Mask Detector", frame)
 	key = cv2.waitKey(1) & 0xFF
-	
+	end = time.time()
+	t = end - start
+	fps = 1/t
+	print(fps)
 	# if the `q` key was pressed, break from the loop
 	if key == ord("q"):
 		break
