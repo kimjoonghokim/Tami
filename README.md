@@ -7,3 +7,17 @@ Tami was designed and built by Joongho Kim, Elisa Dorn, and Jasmeet Mander for t
 The mask detection aspect of the project is from a tutorial posted by Caroline Dunn at TomsHardware- https://www.tomshardware.com/how-to/raspberry-pi-face-mask-detector
 
 
+## Hardware Used:
+
+* Raspberry Pi 4, 8GB (cooling fans optional)
+* AMG8833 IR Thermal Sensor
+* Pi Camera 2
+* HDMI to Micro-HDMI cable
+* USB-C Power Supply
+* M3 Threaded Brass Inserts
+* Assorted M3 screws
+* Assorted Jumper wires 
+* 3D Printer
+* Soldering Iron
+
+The soldering iron is used purely to set the threaded inserts into the printed parts, this is so that the threads will not strip and ensures that you will be able to repeatedly unscrew the hardware. 
