@@ -22,6 +22,9 @@ os.putenv('SDL_FBDEV', '/dev/fb1')
 pygame.init()
 screen = pygame.display.set_mode((1080,1920))
 screen.fill((255,255,255))
+greenArrow = pygame.image.load("greenarrow.png")
+greenArrow = pygame.transform.scale(greenArrow,(700,700))
+screen.blit(greenArrow,(190,1000))
 pygame.display.update()
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
