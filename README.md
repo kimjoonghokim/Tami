@@ -26,3 +26,6 @@ Please ensure that you have OpenCV, Tensorflow and CircuitPython installed
 * Soldering Iron
 
 The soldering iron is used purely to set the threaded inserts into the printed parts, this is so that the threads will not strip and ensures that you will be able to repeatedly unscrew the hardware. Follow the technical sheet for the AMG8833 to wire it properly.
+
+## How To Run:
+After you ensure that you have all the prereqs installed, and the hardware is set up, clone this repo and run the file marked "detect_mask_picam_buzzer.py". Ensure that the imported libraries are also all installed.
