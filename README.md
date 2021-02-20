@@ -10,7 +10,8 @@ The mask detection aspect of the project is from a tutorial posted by Caroline D
 ## Hardware Used:
 
 * Raspberry Pi 4, 8GB (cooling fans optional)
-* AMG8833 IR Thermal Sensor
+* AMG8833 IR Thermal Sensor (Adafruit)
+* 7-inch Touchscreen Display (Sunfounder)
 * Pi Camera 2
 * HDMI to Micro-HDMI cable
 * USB-C Power Supply
