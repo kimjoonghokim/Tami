@@ -4,8 +4,6 @@ Tami is Raspberry Pi based device designed to assist stores and businesses in sa
 
 Tami was designed and built by Joongho Kim, Elisa Dorn, and Jasmeet Mander for the Smart City Category of MakeUofT2021.
 
-The mask detection aspect of the project from tutorial posted by Caroline Dunn at TomsHardware- https://www.tomshardware.com/how-to/raspberry-pi-face-mask-detector
-
-![RaspberryPi Face Mask](https://github.com/carolinedunn/Face_Mask_Detection/blob/main/maskon-maskoff.png)
+The mask detection aspect of the project is from a tutorial posted by Caroline Dunn at TomsHardware- https://www.tomshardware.com/how-to/raspberry-pi-face-mask-detector
 
 
