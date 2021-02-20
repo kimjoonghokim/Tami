@@ -4,7 +4,11 @@ Tami is Raspberry Pi based device designed to assist stores and businesses in sa
 
 Tami was designed and built by Joongho Kim, Elisa Dorn, and Jasmeet Mander for the Smart City Category of MakeUofT2021.
 
-The mask detection aspect of the project is from a tutorial posted by Caroline Dunn at TomsHardware- https://www.tomshardware.com/how-to/raspberry-pi-face-mask-detector
+The mask detection aspect of the project was based from a tutorial posted by Caroline Dunn at TomsHardware- https://www.tomshardware.com/how-to/raspberry-pi-face-mask-detector
+
+## Software PreReqs:
+Please ensure that your Raspberry Pi is installed with RaspberryOS
+Please ensure that you have OpenCV, Tensorflow and CircuitPython installed
 
 
 ## Hardware Used:
@@ -21,4 +25,4 @@ The mask detection aspect of the project is from a tutorial posted by Caroline D
 * 3D Printer
 * Soldering Iron
 
-The soldering iron is used purely to set the threaded inserts into the printed parts, this is so that the threads will not strip and ensures that you will be able to repeatedly unscrew the hardware. 
+The soldering iron is used purely to set the threaded inserts into the printed parts, this is so that the threads will not strip and ensures that you will be able to repeatedly unscrew the hardware. Follow the technical sheet for the AMG8833 to wire it properly.
